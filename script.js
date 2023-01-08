@@ -100,7 +100,6 @@ function getPasswordOptions() {
   };
   var noOptionPicked = true;
   while (noOptionPicked == true) {
-  
     //Ask user to select password lenght
     passwordOptions.passwordLength = Number(prompt("How many characters do you want your password to have? Enter a number between 10 and 64"));
     // Validate answers and loop until the answer matches our criteria
@@ -114,6 +113,7 @@ function getPasswordOptions() {
     passwordOptions.confirmUpperCase = confirm("Do you want your password to include Uppercase Characters?");
     if (passwordOptions.confirmSpecialCharacters == false && passwordOptions.confirmNumbers == false && passwordOptions.confirmLowerCase == false && passwordOptions.confirmUpperCase == false) {
       noOptionPicked = true;
+      //alert prompting the user to pick at least one character category
       alert("You must pick at least one character type: special, numeric, upper case or lower case. Try again!");
     } else { 
       noOptionPicked = false;
@@ -126,7 +126,7 @@ function getPasswordOptions() {
 function getRandom(arr) {
  return arr[Math.floor(Math.random() * arr.length)];
 }
-
+//function that shuffles characters and doesn't display them in the order they were programmed, aka special, numeric, lower case, uppercase
 function shuffleCharacters(characters){
   var shuffledCharacters = '';
   characters = characters.split('');
@@ -136,7 +136,7 @@ function shuffleCharacters(characters){
   return shuffledCharacters;
 }
 
-// Function to generate password with user input
+// Function that generates password with the user input
 function generatePassword() {
   passwordOptions = getPasswordOptions();
   console.log(passwordOptions);

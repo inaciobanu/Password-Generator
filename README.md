@@ -29,9 +29,9 @@ The following image shows the web application's appearance and functionality:
 
 I was required to submit the following for review:
 
-* The URL of the deployed application is here.
+* The URL of the deployed application is [here](https://inaciobanu.github.io/Password-Generator/).
 
-* The URL of the GitHub repository is here.
+* The URL of the GitHub repository is [here](https://github.com/inaciobanu/Password-Generator).
 
 ---
 
